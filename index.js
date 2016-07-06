@@ -65,7 +65,7 @@ class IsomorphicFetch {
 	getOptionsToCarry(options) {
 		var headers = {};
 		if (options.headers['user-agent']) {
-			headers['user-agent'] = options.headers['user-agent']
+			headers['user-agent'] = options.headers['user-agent'];
 		}
 		return {
 			headers
