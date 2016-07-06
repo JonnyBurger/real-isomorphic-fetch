@@ -22,7 +22,10 @@ class IsomorphicFetch {
 					options.headers = {};
 				}
 
-				options.headers.Cookie = cookie;
+				if (!window) { // Don't include cookie header if browser / react native environment
+					options.headers.Cookie = cookie;
+				}
+
 				options.headers = this.normalizeHeaders(options.headers);
 				return this.fetch(url, options);
 			})
