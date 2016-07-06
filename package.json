@@ -1,0 +1,34 @@
+{
+  "name": "real-isomorphic-fetch",
+  "version": "1.0.0",
+  "description": "Isomorphic fetch() with cookie 🍪 and redirect ⏩ support for all environments",
+  "license": "MIT",
+  "repository": "JonnyBurger/real-isomorphic-fetch",
+  "author": {
+    "name": "Jonny Burger",
+    "email": "jonathanburger11@gmail.com",
+    "url": "jonny.io"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "xo --env=browser"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "isomorphic",
+    "fetch",
+    "redirect",
+    "cookie",
+    "cookies"
+  ],
+  "dependencies": {
+    "tough-cookie-no-native": "^2.3.0"
+  },
+  "devDependencies": {
+    "xo": "^0.15.0"
+  }
+}
