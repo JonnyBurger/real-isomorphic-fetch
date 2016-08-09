@@ -22,7 +22,7 @@ class IsomorphicFetch {
 					options.headers = {};
 				}
 
-				if (typeof window == 'undefined') { // Don't include cookie header if browser / react native environment
+				if (typeof window === 'undefined') { // Don't include cookie header if browser / react native environment
 					options.headers.Cookie = cookie;
 				}
 
