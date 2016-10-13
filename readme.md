@@ -11,10 +11,11 @@ npm install real-isomorphic-fetch --save
 ## Usage
 
 ```js
-var IsomorphicFetch = require('real-isomorphic-fetch');
-var fetch = require('node-fetch'); // could also be window.fetch in the browser or global.fetch in react-native
-var fetchInstance = new IsomorphicFetch(fetch) // cookies are shared between every IsomorphicFetch instance
-fetch('https://example.com/123') // Cookies and redirects are handled automatically
+const IsomorphicFetch = require('real-isomorphic-fetch');
+const fetch = require('node-fetch'); // could also be window.fetch in the browser or global.fetch in react-native
+const fetchInstance = new IsomorphicFetch(fetch) // cookies are shared between every IsomorphicFetch instance
+
+fetchInstance('https://example.com/123') // Cookies and redirects are handled automatically
 .then(response => response.text())
 .then(text => console.log(text))
 .catch(err => console.error(err));
@@ -28,7 +29,7 @@ fetch('https://example.com/123') // Cookies and redirects are handled automatica
 * ... but then you have to intercept redirects manually because [fetch-cookie](https://github.com/valeriangalliat/fetch-cookie) doesn't handle them...
 
 ```js
-var fetchWithCookie = require('fetch-cookie')(require('node-fetch'));
+const fetchWithCookie = require('fetch-cookie')(require('node-fetch'));
 fetchWithCookie('https://example.com/123', {
 	redirect: 'manual'
 })
