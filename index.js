@@ -30,7 +30,7 @@ class IsomorphicFetch {
 				return this.fetch(url, options);
 			})
 			.then(response => {
-				var cookies = response.headers.getAll('Set-Cookie');
+				var cookies = response.headers.get('Set-Cookie');
 				if (!cookies.length) {
 					return [response];
 				}
