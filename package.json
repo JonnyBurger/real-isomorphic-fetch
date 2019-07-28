@@ -1,6 +1,6 @@
 {
   "name": "real-isomorphic-fetch",
-  "version": "2.0.5",
+  "version": "3.0.0",
   "description": "Isomorphic fetch() with cookie 🍪 and redirect ⏩ support for all environments",
   "license": "MIT",
   "repository": "JonnyBurger/real-isomorphic-fetch",
@@ -26,7 +26,7 @@
     "cookies"
   ],
   "dependencies": {
-    "tough-cookie-no-native": "^2.3.0"
+    "tough-cookie-no-native": "^2.4.1"
   },
   "devDependencies": {
     "xo": "^0.15.0"
